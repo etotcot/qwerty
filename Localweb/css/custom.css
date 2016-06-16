@@ -125,6 +125,7 @@ body {
 }
  
 #reg_img{
+	object-fit: cover;
  	border-radius: 50%;
 	width: 15em;
 	height: 15em; 

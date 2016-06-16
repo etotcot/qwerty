@@ -1,5 +1,8 @@
 (function($) {
 
+    
+	/* Image Base 64 */
+	
 	function EL(id) { return document.getElementById(id); };
 
 	$(document).on('click', "#reg_upload", function () {
@@ -17,59 +20,58 @@
 			FR.readAsDataURL( this.files[0] );
 		}
 	}
+
+	/* Registration */
 	
-	function start_check() {
-		var start_username = $('input[name="start_username_name"]').val();
-    	var start_password = $('input[name="start_password_name"]').val();
-    	var username_t = "test";
-		var password_t = "test";
-		var username_c = sessionStorage.getItem('Username');
-        var password_c = sessionStorage.getItem('Password');
-        alert(username_c);
-        if ((start_username == username_t)&&(start_password == password_t)) {
-        	$("#start_form").attr("action", "test.html");
-        	$("#start_form").submit();
-        };	
-        else if ((start_username == username_c) && (start_password == password_c)) {
-        	$("#start_form").attr("action", "user.html");
-        	$("#start_form").submit();
-        };
-        else {
-        	alert("Wrong username or password");
-        };
-	}
-
-	$(document).on('click', "#start_login", function () {
-    	start_check();
-    });
-
 	function sessionSave() {
 		var username = $('input[name="username"]').val();
-    	sessionStorage.setItem('Username', username);
+    	localStorage.setItem('Username', username);
     	var password = $('input[name="password"]').val();
-    	sessionStorage.setItem('Password', password);
+    	localStorage.setItem('Password', password);
     	var email = $('input[name="email"]').val();
-    	sessionStorage.setItem('Email', email);
+    	localStorage.setItem('Email', email);
     	var country = $('input[name="country"]').val();
-    	sessionStorage.setItem('Country', country);
+    	localStorage.setItem('Country', country);
     	var state = $('input[name="state"]').val();
-    	sessionStorage.setItem('State', state);
+    	localStorage.setItem('State', state);
     	var city = $('input[name="city"]').val();
-    	sessionStorage.setItem('City', city);
+    	localStorage.setItem('City', city);
     	var zip = $('input[name="zip"]').val();
-    	sessionStorage.setItem('Zip', zip);
+    	localStorage.setItem('Zip', zip);
     	var name = $('input[name="name"]').val();
-    	sessionStorage.setItem('Full name', name);
+    	localStorage.setItem('Full name', name);
     	var contact = $('input[name="contact"]').val();
-    	sessionStorage.setItem('Contact', contact);
+    	localStorage.setItem('Contact', contact);
     	var base64 = $('input[name="imagebase"]').val();
-    	sessionStorage.setItem('Image', base64);
+    	localStorage.setItem('Image', base64);
 	}
 	
 	$(document).on('click', "#reg_submit", function () {
     	sessionSave();
     });
+	
+	/* Log In Validation */
 
+	$(document).on('click', "#start_login", function () {
+    	var start_username = $('input[name="start_username_name"]').val();
+    	var start_password = $('input[name="start_password_name"]').val();
+    	var username_t = "test";
+		var password_t = "test";
+		var username_c = localStorage.getItem('Username');
+        var password_c = localStorage.getItem('Password');
+        if ((start_username == username_t)&&(start_password == password_t)) {
+        	$("#start_form").attr("action", "test.html");
+        	$("#start_form").submit();
+        }	
+        else if ((start_username == username_c) && (start_password == password_c)) {
+        	$("#start_form").attr("action", "user.html");
+        	$("#start_form").submit();
+        }
+        else if (((start_username != username_t)||(start_password != password_t))&&((start_username != username_c) || (start_password != password_c))) {
+        	alert("Wrong username or password");
+        };
+    });
+    
 
     
 })(jQuery);
