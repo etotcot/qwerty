@@ -31,23 +31,146 @@
 </head>
 
 <body>
-	<div class="logo">
-		<img src="images/localweb.png">
-	</div>
+
+	<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+    	<div class="container">
+    		<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Localweb</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">My Profile</a></li>
+					<li><a href="bmi.html">BMI Calculator</a></li>
+					<li><a href="apm.html">APM Test</a></li>
+					<li><a href="iq.html">IQ Test</a></li>
+					<li><a href="or.html">Orientation test</a></li>
+					<li class="nav_info"><a href="about.html">About</a></li>
+				</ul>
+			</div>
+      </div>
+    </nav>
+
+	<!-- Main -->
 	<div class="container">
 		<div class="row">
-		  <form class="start_form" id="start_form">
-			<input type="text" id="start_username" name="start_username_name" class="form-control" placeholder="Username" required autofocus>
-			<input type="password" id="start_password" name="start_password_name" class="form-control" placeholder="Password" required>
-			<div class="clearfix"></div>
-			<div class="start_buttons">
-				<div class="col-md-6"><a class="btn btn-lg btn-info btn-block" href="reg.html">Sign in</a></div>
-				<div class="col-md-6"><button class="btn btn-lg btn-success btn-block" id="start_login">Log in</button></div>
+			<div class="col-md-3">
+					<center>
+						<div class="wrap">
+							<img id="profile_test_img" class="photo" src="images/trump.jpg">
+						</div>
+					</center>
+					<hr>
+					<center>
+						<h2 id="profile_test_name">Donald Trump</h2>
+						<h3 id="profile_test_address">USA, New York</h3>
+					</center>
 			</div>
-		  </form>
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<div class="profile_logo">
+					<img src="images/stats.png">
+				</div>
+				<div class="row profile">
+					<form class="stats">
+					<ul class="list-unstyled">
+					<div class="col-md-4">
+						<li>
+							<label>AGE</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="text" name="username" disabled value="70" />
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+						<li>
+							<label>WEIGHT</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="email" name="email" disabled value="188"/>
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+						<li>
+							<label>HEIGHT</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="text" name="country" disabled value="90"/>
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+					</div>
+					<div class="col-md-4">
+						<li>
+							<label>IQ</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="text" name="username" disabled value="81" />
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+						<li>
+							<label>BMI</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="email" name="email" disabled value="25.46"/>
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+						<li>
+							<label>APM</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="text" name="country" disabled value="33"/>
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+					</div>
+					<div class="col-md-4">
+						<li>
+							<label>GENDER</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="text" name="username" disabled value="Male" />
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+						<li>
+							<label>ORIENTATION</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="email" name="email" disabled value="Heterosexual"/>
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+						<li>
+							<label>RELIGION</label>
+							<div class="input-group">
+      						<div class="input-group-addon"></div>
+							<input class="form-control input-lg" type="text" name="country" disabled value="Christianity"/>
+							<div class="input-group-addon"></div>
+    						</div>
+						</li>
+						<li>
+					</div>
+					</ul>
+					</form>
+					<div class="clearfix"></div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" style="width: 76%"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-		
+	
+	<!-- Footer -->	
 	<footer class="footer">
       <div class="container" id="footer">
         <script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script> &copy; Copyright <a href="#">Localweb</a> - All rights reserved
