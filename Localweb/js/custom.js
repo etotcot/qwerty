@@ -71,7 +71,19 @@
         	alert("Wrong username or password");
         };
     });
-    
+ 
+ 	/* Currency generator */
+ 	
+ 	$(document).ready( function () {
+ 		var rand = Math.floor((Math.random() * 10) + 1);
+ 		var usd = Math.floor(rand * 693.73);
+ 		var eu = Math.floor(rand * 610.17);
+ 		var pnd = Math.floor(rand * 469.88);
+ 		$("#btc").attr("value", rand);
+ 		$("#pnd").attr("value", pnd);
+ 		$("#eu").attr("value", eu);
+ 		$("#usd").attr("value", usd);
+	}); 	
 
     
 })(jQuery);

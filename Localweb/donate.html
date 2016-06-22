@@ -64,38 +64,77 @@
 	<!-- Main -->
 	
 	
-	<div class="row relative">
-		<center>
-			<div class="col-md-4 contact_info">
-				<img  src="images/call.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="text" disabled value="911"/>
-					<div class="input-group-addon"></div>
-				</div>
-				<a class="btn btn-lg btn-danger btn-block down" href="contact.html">Make a call</a>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<center>
+					<h2 id="why">Why us?</h2>
+					<hr>
+					<h3>We are awesome</h3>
+					<h4>This is the only reason for you to give us your money</h4>
+					<h3>We are kind</h3>
+					<h4>We will transfer 50% of donations to INTI College</h4>
+					<h4>Actually not.</h4>
+				</center>
 			</div>
-			<div class="col-md-4 contact_info">
-				<img id="support" src="images/support.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="text" disabled value="Paypal"/>
-					<div class="input-group-addon"></div>
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<div class="profile_logo">
+					<img src="images/donate.png">
 				</div>
-				<a class="btn btn-lg btn-success btn-block down" href="donate.html">Support the project</a>
-			</div>
-			<div class="col-md-4 contact_info">
-				<img  src="images/text.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="email" disabled value="president@whitehouse.gov"/>
-					<div class="input-group-addon"></div>
+				<div class="row profile donate">
+					<form class="stats" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<div class="extra">
+						<div class="col-md-6 col-lg-3">
+							<center>
+								<label id="currency">Dollars</label>
+								<div class="input-group down_h">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></div>
+										<input id="usd" class="form-control input-lg small_text" type="text" disabled value="0"/>
+									<div class="input-group-addon">.00</div>
+								</div>
+							</center>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<center>
+								<label id="currency">Euros</label>
+								<div class="input-group down_h">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-euro" aria-hidden="true"></span></div>
+										<input id="eu" class="form-control input-lg small_text" type="text" disabled value="0"/>
+									<div class="input-group-addon">.00</div>
+								</div>
+							</center>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<center>
+								<label id="currency">Pounds</label>
+								<div class="input-group down_h">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-gbp" aria-hidden="true"></span></div>
+										<input id="pnd" class="form-control input-lg small_text" type="text" disabled value="0"/>
+									<div class="input-group-addon">.00</div>
+								</div>
+							</center>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<center>
+								<label id="currency">Bitcoins</label>
+								<div class="input-group down_h">
+									<div class="input-group-addon"><span class="glyphicon glyphicon-btc" aria-hidden="true"></span></div>
+										<input id="btc" class="form-control input-lg small_text" type="text" disabled value="0"/>
+									<div class="input-group-addon">.00</div>
+								</div>
+							</center>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="326DWKR44V4JY">
+					<button id="donate_button" type="submit" value="I want to pay now" class="btn btn-success btn-lg btn-block" name="Submit" >SEND MONEY</button>
+					</form>
 				</div>
-				<a class="btn btn-lg btn-danger btn-block down" href="mailto:president@whitehouse.gov">Send e-mail</a>
 			</div>
-		</center>
+		</div>
 	</div>
-	<div id="map"></div>
 	
 	<!-- Footer -->	
 	<footer class="footer">
