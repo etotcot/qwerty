@@ -25,10 +25,6 @@
     <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     
-    <!-- MAP -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDGMbWkeiCcl2fG3jTw-a3WxYOrTLQs5do"></script>
-    <script type="text/javascript" src="js/map.js"></script>
-    
     <!-- My Script -->
     <script type="text/javascript" src="js/custom.js"></script>
 	<!-- END JAVASCRIPT -->	
@@ -54,48 +50,48 @@
 					<li><a href="bmi.html">BMI Calculator</a></li>
 					<li><a href="apm.html">APM Test</a></li>
 					<li><a href="iq.html">IQ Test</a></li>
-					<li><a href="or.html">Orientation test</a></li>
-					<li><a href="about.html">About</a></li>
+					<li class="active"><a href="or.html">Orientation test</a></li>
+					<li class="nav_info"><a href="about.html">About</a></li>
 				</ul>
 			</div>
       </div>
     </nav>
 
 	<!-- Main -->
-	
-	
-	<div class="row relative">
-		<center>
-			<div class="col-md-4 contact_info">
-				<img  src="images/call.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="text" disabled value="911"/>
-					<div class="input-group-addon"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="profile_logo orientation_image male">
+					<img src="images/male.png">
 				</div>
-				<a class="btn btn-lg btn-danger btn-block down" href="contact.html">Make a call</a>
 			</div>
-			<div class="col-md-4 contact_info">
-				<img id="support" src="images/support.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="text" disabled value="Paypal"/>
-					<div class="input-group-addon"></div>
+			<div class="col-md-6">
+			<center>
+				<div class="profile_logo orientation_image">
+					<img src="images/orientation.png">
 				</div>
-				<a class="btn btn-lg btn-success btn-block down" href="donate.html">Support the project</a>
-			</div>
-			<div class="col-md-4 contact_info">
-				<img  src="images/text.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="email" disabled value="president@whitehouse.gov"/>
-					<div class="input-group-addon"></div>
+				<div class="input-group question">
+				<div class="input-group-addon"></div>
+				<input class="form-control input-lg index_not_so_small" type="text" name="username" id="orientation_question" disabled value="Do you like to play football?" />
+				<div class="input-group-addon"></div>
 				</div>
-				<a class="btn btn-lg btn-danger btn-block down" href="mailto:president@whitehouse.gov">Send e-mail</a>
+			</center>
+			<div class="row orientation_button">
+				<div class="col-md-6">
+					<button class="btn btn-lg btn-danger btn-block index_small" value="0" id="no_f">NO</button>
+				</div>
+				<div class="col-md-6">
+					<button class="btn btn-lg btn-success btn-block index_small" value="1" id="yes_f">YES</button>
+				</div>
 			</div>
-		</center>
+			</div>
+			<div class="col-md-3">
+				<div class="profile_logo orientation_image female">
+					<img src="images/female.png">
+				</div>
+			</div>
+		</div>
 	</div>
-	<div id="map"></div>
 	
 	<!-- Footer -->	
 	<footer class="footer">

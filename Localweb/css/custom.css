@@ -216,7 +216,7 @@ input:disabled {
 	text-align: center !important;
 }
 
-.progress {
+.progress_user {
 	margin-top: 5%;
 	margin-left: 2%;
 	width: 97%;
@@ -369,4 +369,118 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 #donate_button {
 	margin-top: 5%;
+}
+
+/* Orientation */
+
+.orientation_image {
+	width: 100%;
+	margin-left: 0%;
+	margin-top: 30%;
+}
+
+.question {
+	margin-top: 5%;
+}
+
+.orientation_button {
+	margin-top: 5%;
+}
+
+.male {
+	margin-left: -20%;
+	margin-top: 120%;
+	height: 100%;
+}
+
+.female {
+	margin-left: 40%;
+	margin-top: 7%;
+	height: 100%;
+}
+
+@media (max-width: 1000px) {
+	.male, .female {
+		display: none;
+	}
+}
+
+@media (min-height: 700px) {
+	.male {
+		margin-top: 140%;
+	}
+}
+
+@media(max-width: 500px) {
+	.index_not_so_small {
+		font-size: 0.85em !important;
+	}
+}
+
+/* APM Test */
+
+.apm_image {
+	margin-top: 10%;
+	margin-left: 0;
+}
+
+#apm__real_counter {
+	margin-top: 10%;
+}
+
+#apm_start, #apm_end {
+	margin-top: 5%;
+}
+
+.apm_progress {
+	margin-top: 25%;
+	width: 100%;
+	height: 3em;
+}
+
+.progress-bar-vertical {
+  width: 4em;;
+  height: 30em;
+  margin-top: 20%;
+}
+
+.progress-bar-vertical .progress-bar {
+  width: 100%;
+  height: 0;
+}
+
+#bar_1 {
+	margin-left: 10%;
+}
+
+#bar_2 {
+	margin-left: 60%;
+}
+
+#bar_3 {
+	margin-top: 15%;
+	height: 3em;
+}
+
+@media (max-width: 1000px) {
+	#bar_1, #bar_2 {
+		display: none;
+	}
+	
+	.apm_pricel {
+		display: none;
+	}
+}
+
+@media (min-width: 1000px) {
+	#bar_3 {
+		display: none;
+	}
+}
+
+.apm_pricel {
+	height: 20em;
+	width: 20em;
+	margin-top: 5%;
+	margin-left: 0;
 }

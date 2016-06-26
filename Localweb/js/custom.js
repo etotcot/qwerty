@@ -83,7 +83,76 @@
  		$("#pnd").attr("value", pnd);
  		$("#eu").attr("value", eu);
  		$("#usd").attr("value", usd);
-	}); 	
+	});
+	
+	/* Orientation test */
+	
+	$(document).on('click', "#yes_f", function () {
+		localStorage.setItem('Football', "1");
+		$("#orientation_question").attr("value", "Do you vape?");
+		$("#yes_f").attr("id", "yes_v");
+		$("#no_f").attr("id", "no_v");
+		return false;
+	});
+	
+	$(document).on('click', "#no_f", function () {
+		localStorage.setItem('Football', "0");
+		$("#orientation_question").attr("value", "Do you vape?");
+		$("#yes_f").attr("id", "yes_v");
+		$("#no_f").attr("id", "no_v");
+		return false;
+	});
+	
+	$(document).on('click', "#yes_v", function () {
+		localStorage.setItem('Vape', "1");
+		$("#orientation_question").attr("value", "Did you have homosexual contact?");
+		$("#yes_v").attr("id", "yes_c");
+		$("#no_v").attr("id", "no_c");
+		return false;
+	});
+	
+	$(document).on('click', "#no_v", function () {
+		localStorage.setItem('Vape', "0");
+		$("#orientation_question").attr("value", "Did you have homosexual contact?");
+		$("#yes_v").attr("id", "yes_c");
+		$("#no_v").attr("id", "no_c");
+		return false;
+	});
+	
+	$(document).on('click', "#yes_c", function () {
+		localStorage.setItem('Sex', "1");
+		window.location.replace("user.html");
+	});
+	
+	$(document).on('click', "#no_c", function () {
+		localStorage.setItem('Sex', "0");
+		window.location.replace("user.html");
+	});
+	
+	/* APM test */
+	
+	$(document).on('click', "#apm_start", function () {
+		$("#apm_start").attr("id", "apm_end");
+		var time_counter = 0;
+		var click_counter = 0;
+		$(document).on('click', "#clicky", function () {
+			click_counter++;
+			$("#apm_real_counter").attr("value", click_counter);
+		});
+		var loop = setInterval(function() {
+			if (time_counter <= 60) {
+				$("#bar_1_counter").attr("style", "height: " + time_counter * 1.67 + "%;");
+				$("#bar_2_counter").attr("style", "height: " + time_counter * 1.67 + "%;");
+				$("#bar_3_counter").attr("style", "width: " + time_counter * 1.67 + "%;");
+				time_counter++;
+			}
+			else {
+				clearInterval(loop);
+				localStorage.setItem('APM', click_counter);
+				window.location.replace("user.html");
+			};
+		}, 1000);
+	});
 
     
 })(jQuery);

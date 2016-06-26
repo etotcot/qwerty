@@ -25,10 +25,6 @@
     <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     
-    <!-- MAP -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDGMbWkeiCcl2fG3jTw-a3WxYOrTLQs5do"></script>
-    <script type="text/javascript" src="js/map.js"></script>
-    
     <!-- My Script -->
     <script type="text/javascript" src="js/custom.js"></script>
 	<!-- END JAVASCRIPT -->	
@@ -52,50 +48,52 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#">My Profile</a></li>
 					<li><a href="bmi.html">BMI Calculator</a></li>
-					<li><a href="apm.html">APM Test</a></li>
+					<li class="active"><a href="apm.html">APM Test</a></li>
 					<li><a href="iq.html">IQ Test</a></li>
 					<li><a href="or.html">Orientation test</a></li>
-					<li><a href="about.html">About</a></li>
+					<li class="nav_info"><a href="about.html">About</a></li>
 				</ul>
 			</div>
       </div>
     </nav>
 
 	<!-- Main -->
-	
-	
-	<div class="row relative">
-		<center>
-			<div class="col-md-4 contact_info">
-				<img  src="images/call.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="text" disabled value="911"/>
-					<div class="input-group-addon"></div>
+	<div class="container" id="clicky">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="progress progress-bar-vertical" id="bar_1">
+					<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" id="bar_1_counter" style="height: 0%;">
+					  <span class="sr-only">60% Complete</span>
+					</div>
 				</div>
-				<a class="btn btn-lg btn-danger btn-block down" href="contact.html">Make a call</a>
 			</div>
-			<div class="col-md-4 contact_info">
-				<img id="support" src="images/support.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="text" disabled value="Paypal"/>
-					<div class="input-group-addon"></div>
+			<div class="col-md-6">
+			<center>
+				<div class="profile_logo apm_image">
+					<img src="images/apm.png">
 				</div>
-				<a class="btn btn-lg btn-success btn-block down" href="donate.html">Support the project</a>
-			</div>
-			<div class="col-md-4 contact_info">
-				<img  src="images/text.png">
-				<div class="input-group down">
-					<div class="input-group-addon"></div>
-						<input class="form-control input-lg" type="email" disabled value="president@whitehouse.gov"/>
-					<div class="input-group-addon"></div>
+				<div class="input-group question" id="apm_counter">
+				<div class="input-group-addon"></div>
+				<input class="form-control input-lg index_not_so_small" type="text" id="apm_real_counter" name="username" disabled value="0" />
+				<div class="input-group-addon"></div>
 				</div>
-				<a class="btn btn-lg btn-danger btn-block down" href="mailto:president@whitehouse.gov">Send e-mail</a>
+				<button class="btn btn-lg btn-success btn-block index_small" value="0" id="apm_start">START</button>
+				<div class="clearfix"></div>
+				<div class="progress" id="bar_3">
+						<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" id="bar_3_counter" style="width: 0%"></div>
+				</div>
+				<div class="profile_logo apm_pricel">
+					<img src="images/pricel.png">
+				</div>
+			</center>
 			</div>
-		</center>
+			<div class="col-md-3">
+				<div class="progress progress-bar-vertical" id="bar_2">
+					<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" id="bar_2_counter" style="height: 0%;"></div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div id="map"></div>
 	
 	<!-- Footer -->	
 	<footer class="footer">
