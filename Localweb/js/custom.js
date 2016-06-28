@@ -105,18 +105,33 @@
 	
 	$(document).on('click', "#yes_v", function () {
 		localStorage.setItem('Vape', "1");
-		$("#orientation_question").attr("value", "Did you have homosexual contact?");
-		$("#yes_v").attr("id", "yes_c");
-		$("#no_v").attr("id", "no_c");
+		$("#orientation_question").attr("value", "Do you following any religion?");
+		$("#yes_v").attr("id", "yes_r");
+		$("#no_v").attr("id", "no_r");
 		return false;
 	});
 	
 	$(document).on('click', "#no_v", function () {
 		localStorage.setItem('Vape', "0");
-		$("#orientation_question").attr("value", "Did you have homosexual contact?");
-		$("#yes_v").attr("id", "yes_c");
-		$("#no_v").attr("id", "no_c");
+		$("#orientation_question").attr("value", "Do you following any religion?");
+		$("#yes_v").attr("id", "yes_r");
+		$("#no_v").attr("id", "no_r");
 		return false;
+	});
+	
+	$(document).on('click', "#yes_r", function () {
+		localStorage.setItem('Religion', "1");
+		$("#orientation_question").attr("value", "Did you have homosexual contact?");
+		$("#yes_r").attr("id", "yes_c");
+		$("#no_r").attr("id", "no_c");
+		return false;
+	});
+	
+	$(document).on('click', "#no_r", function () {
+		localStorage.setItem('Religion', "0");
+		$("#orientation_question").attr("value", "Did you have homosexual contact?");
+		$("#yes_r").attr("id", "yes_c");
+		$("#no_r").attr("id", "no_c");
 	});
 	
 	$(document).on('click', "#yes_c", function () {
@@ -153,6 +168,239 @@
 			};
 		}, 1000);
 	});
+	
+	/* BMI Calculator */
+	
+	function bmi_save() {
+		var gender = $('#bmi_gender').val();
+    	localStorage.setItem('Gender', gender);
+    	var age = $('#bmi_age').val();
+    	localStorage.setItem('Age', age);
+    	var weight = $('#bmi_weight').val();
+    	localStorage.setItem('Weight', weight);
+    	var height = $('#bmi_height').val();
+    	localStorage.setItem('Height', height);
+	}
+	
+	$(document).on('click', "#submit_bmi", function () {
+		bmi_save();
+	});
+	
+	/* IQ Test */
+	
+	var IQ_results = 0;
+	
+	$(document).on('click', "#iq_11", function () {
+		IQ_results++;
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_2");
+		return false;
+	});
+	
+	$(document).on('click', "#iq_12", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_2");
+		return false;
+	});
 
+	$(document).on('click', "#iq_13", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_2");
+		return false;
+	});
+	
+	
+	$(document).on('click', "#iq_21", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_3");
+		return false;
+	});
+	
+	$(document).on('click', "#iq_22", function () {
+		IQ_results++;
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_3");
+		return false;
+	});
+
+	$(document).on('click', "#iq_23", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_3");
+		return false;
+	});
+
+
+	$(document).on('click', "#iq_31", function () {
+		IQ_results++;
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_4");
+		return false;
+	});
+	
+	$(document).on('click', "#iq_32", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_4");
+		return false;
+	});
+
+	$(document).on('click', "#iq_33", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_4");
+		return false;
+	});
+	
+	
+	$(document).on('click', "#iq_41", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_5");
+		return false;
+	});
+	
+	$(document).on('click', "#iq_42", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_5");
+		return false;
+	});
+
+	$(document).on('click', "#iq_43", function () {
+		IQ_results++;
+		localStorage.setItem('IQ_test', IQ_results);
+		$(".query_mark").empty();
+		$(".query_mark").load("iq_temp.html #id_query_mark_5");
+		return false;
+	});
+	
+
+	$(document).on('click', "#iq_51", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		window.location.replace("user.html");
+		return false;
+	});
+	
+	$(document).on('click', "#iq_52", function () {
+		IQ_results++;
+		localStorage.setItem('IQ_test', IQ_results);
+		window.location.replace("user.html");
+		return false;
+	});
+
+	$(document).on('click', "#iq_53", function () {
+		localStorage.setItem('IQ_test', IQ_results);
+		window.location.replace("user.html");
+		return false;
+	});	
+    
+    /* Userpage */
+    
+    $(document).ready( function () {
+ 		var user_age = parseInt(localStorage.getItem("Age"));
+ 		$("#user_age").attr("value", user_age);
+ 		var user_weight = parseInt(localStorage.getItem("Weight"));
+ 		$("#user_weight").attr("value", user_weight);
+ 		var user_height = parseInt(localStorage.getItem("Height"));
+ 		$("#user_height").attr("value", user_height);
+ 		var user_gender = localStorage.getItem("Gender");
+ 		$("#user_gender").attr("value", user_gender);
+ 		var user_iq = parseInt(localStorage.getItem("IQ_test")) * 10 + 80 + Math.floor((Math.random() * 10) + 1) ;
+ 		$("#user_iq").attr("value", user_iq);
+ 		var user_apm = localStorage.getItem("APM");
+ 		$("#user_apm").attr("value", user_apm);
+ 		var user_bmi = parseFloat(user_weight) / ((parseFloat(user_height) / 100) ^ 2);
+ 		$("#user_bmi").attr("value", user_bmi);
+ 		var user_religion = localStorage.getItem("Religion");
+ 		if (user_religion == "1") {
+ 			$("#user_religion").attr("value", "+");
+ 		}
+ 		else if (user_religion == "0") {
+ 			$("#user_religion").attr("value", "-");
+ 		}
+ 		else {
+			$("#user_religion").attr("value", "undefined"); 		
+ 		}
+ 		var user_football = localStorage.getItem("Football");
+ 		var user_sex = localStorage.getItem("Vape");
+ 		var user_vape = localStorage.getItem("Sex");
+ 		var user_orientation = 0;
+ 		if (user_football == "1" || user_sex == "1" || user_vape =="1") {
+ 			user_orientation = 1;
+ 			$("#user_orientation").attr("value", "Homosexual");
+ 		}
+ 		else if (user_football == "0" || user_sex == "0" || user_vape == "0") {
+ 			$("#user_orientation").attr("value", "Heterosexual");
+ 		}
+ 		else {
+ 			$("#user_orientation").attr("value", "undefined");
+ 		}
+ 		var user_img = localStorage.getItem("Image");
+ 		$("#profile_user_img").attr("src", user_img);
+ 		var user_name = localStorage.getItem("Full name");
+ 		$("#profile_user_name").html(user_name);
+ 		var user_address = localStorage.getItem("Country") + ", " + localStorage.getItem("City");
+ 		$("#profile_user_address").html(user_address);
+ 		if (user_bmi < 18) {
+ 			var BMI_Diff = 18 - user_bmi;
+ 		}
+ 		else if (user_bmi > 24) {
+ 			var BMI_Diff = user_bmi - 24;
+ 		}
+ 		else {
+ 			var BMI_Diff = 0;
+ 		}
+ 		if (user_height < 150) {
+ 			var Height_Diff = 150 - user_height;
+ 		}
+ 		else if (user_height > 190) {
+ 			var Height_Diff = user_height - 200;
+ 		}
+ 		else {
+ 			var Height_Diff = 0;
+ 		}
+ 		if (user_weight < 50) {
+ 			var Weight_Diff = 50 - user_weight;
+ 		}
+ 		else if (user_weight > 90) {
+ 			var Weight_Diff = user_weight - 90;
+ 		}
+ 		else {
+ 			var Weight_Diff = 0;
+ 		}
+ 		var user_death = (((user_iq + user_apm / 7) / (user_age + BMI_Diff + Weight_Diff + Height_Diff)) - 10) * -10;
+ 		if (user_gender == "Male" || user_gender == "male") {
+ 			user_death *= 1.2;
+ 		}
+ 		else if (user_gender == "Female" || user_gender == "female") {
+ 			user_death /= 1.2;
+ 		}
+ 		else {
+ 			user_death *= 1;
+ 		}
+ 		if (user_orientation == 1) {
+ 			user_death *= 1.2;
+ 		}
+ 		else {
+ 			user_death /= 1.2;
+ 		}
+ 		if (user_religion == "1") {
+ 			user_death /= 1.2;
+ 		}
+ 		else if (user_religion == "0") {
+ 			user_death *= 1.2;
+ 		}
+ 		else {
+ 			user_death *= 1;
+ 		}
+ 		$("#user_death").attr("style", "width: " + user_death + "%;");
+	});
     
 })(jQuery);

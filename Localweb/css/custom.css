@@ -43,7 +43,7 @@ hr:before {
  	border-radius: 50%;
 	width: 15em;
 	height: 15em;
- 	-webkit-filter: grayscale(100%);  
+ 	filter: grayscale(100%);  
 }
 
 /* Index */
@@ -165,7 +165,7 @@ hr:before {
 }
 
 .nowrap {
-	-webkit-filter: none;  
+	filter: none;  
 }
 
 #reg_submit {
@@ -458,7 +458,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 
 #bar_3 {
-	margin-top: 15%;
+	margin-top: 0%;
 	height: 3em;
 }
 
@@ -468,7 +468,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	}
 	
 	.apm_pricel {
-		display: none;
+		height: 5em;
+		width: 10em;
 	}
 }
 
@@ -483,4 +484,83 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	width: 20em;
 	margin-top: 5%;
 	margin-left: 0;
+}
+
+/* BMI */
+
+.bmi_image {
+	margin-top: 10%;
+	margin-left: 0;
+	height: 10em;
+	width: 25em;
+}
+
+@media (max-width: 1000px) {
+	.bmi_image {
+		height: 10em;
+		width: 15em;
+	}
+	
+	.bmi_man {
+		display: none;
+	}
+}
+
+.bmi_man {
+	margin-top: 30%;
+	margin-left: 0%;
+	height: 30em;
+	width: 30em;
+}
+
+.bmi_buttons {
+	margin-top: 0%;
+}
+
+.bmi_buttons input {
+	text-align: center !important;
+}
+
+.bmi_wrap {
+	margin-top: 5%;
+}
+
+/* IQ */
+
+.iq_image {
+	width: 100%;
+	margin-left: 0%;
+	margin-top: 7%;
+}
+
+.es_bot {
+	margin-top: 70%;
+}
+
+.es_top {
+	margin-top: 70%;
+}
+
+#question_image {
+	margin-top :5%;
+	height: 350px;
+	width: 450px;
+}
+
+@media (max-width: 550px) {
+	.iq_image {
+	width: 100%;
+	margin-left: 0%;
+	margin-top: 10%;
+	}
+	
+	#question_image {
+	margin-top :5%;
+	height: 300px;
+	width: 300px;
+	}
+}
+
+.question_button {
+	margin-top: -10%;
 }
