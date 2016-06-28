@@ -43,7 +43,8 @@ hr:before {
  	border-radius: 50%;
 	width: 15em;
 	height: 15em;
- 	filter: grayscale(100%);  
+ 	filter: grayscale(100%);
+ 	-webkit-filter: grayscale(100%);
 }
 
 /* Index */
