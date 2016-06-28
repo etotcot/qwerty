@@ -155,10 +155,10 @@
 			$("#apm_real_counter").attr("value", click_counter);
 		});
 		var loop = setInterval(function() {
-			if (time_counter <= 60) {
-				$("#bar_1_counter").attr("style", "height: " + time_counter * 1.67 + "%;");
-				$("#bar_2_counter").attr("style", "height: " + time_counter * 1.67 + "%;");
-				$("#bar_3_counter").attr("style", "width: " + time_counter * 1.67 + "%;");
+			if (time_counter <= 10) {
+				$("#bar_1_counter").attr("style", "height: " + time_counter * 10 + "%;");
+				$("#bar_2_counter").attr("style", "height: " + time_counter * 10 + "%;");
+				$("#bar_3_counter").attr("style", "width: " + time_counter * 10 + "%;");
 				time_counter++;
 			}
 			else {
@@ -314,9 +314,9 @@
  		$("#user_gender").attr("value", user_gender);
  		var user_iq = parseInt(localStorage.getItem("IQ_test")) * 10 + 80 + Math.floor((Math.random() * 10) + 1) ;
  		$("#user_iq").attr("value", user_iq);
- 		var user_apm = localStorage.getItem("APM");
+ 		var user_apm = parseInt(localStorage.getItem("APM")) * 5;
  		$("#user_apm").attr("value", user_apm);
- 		var user_bmi = parseFloat(user_weight) / ((parseFloat(user_height) / 100) ^ 2);
+ 		var user_bmi = Math.floor(parseFloat(user_weight) / ((parseFloat(user_height) / 100) ^ 2));
  		$("#user_bmi").attr("value", user_bmi);
  		var user_religion = localStorage.getItem("Religion");
  		if (user_religion == "1") {
@@ -346,7 +346,7 @@
  		$("#profile_user_img").attr("src", user_img);
  		var user_name = localStorage.getItem("Full name");
  		$("#profile_user_name").html(user_name);
- 		var user_address = localStorage.getItem("Country") + ", " + localStorage.getItem("City");
+ 		var user_address = localStorage.getItem("Country") + ", " + localStorage.getItem("State");
  		$("#profile_user_address").html(user_address);
  		if (user_bmi < 18) {
  			var BMI_Diff = 18 - user_bmi;
